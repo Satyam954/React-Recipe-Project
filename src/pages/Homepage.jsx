@@ -18,7 +18,7 @@ function Homepage() {
         url = `https://dummyjson.com/recipes/search?limit=6&skip=${skipCount}&q=${qurey}`;
       }
       const { data } = await axios.get(url);
-      console.log(data);
+      
 
       setRecipes((prev) =>
         skipCount === 0 ? data.recipes : [...prev, ...data.recipes]
